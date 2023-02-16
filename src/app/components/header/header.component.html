@@ -1,0 +1,23 @@
+
+<nav class="navbar navbar-expand-lg mb-4 pt-3">
+  <div class="container">
+    <a class="navbar-brand text-dark" routerLink="/">Food Mine!</a>
+
+      <div class="form">
+        <input type="text" placeholder="Search Food Mine!" [(ngModel)]="searchTerm" (change)="search()">
+        <button class="bt" (click)="search()">Search</button>
+      </div>
+
+      <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <a routerLink="/cart-page">
+          <button type="button" class="btn btn-danger position-relative" routerLink="/cart">
+            Cart
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info">
+              {{cart.items.length}}
+            </span>
+          </button>
+        </a>
+      </div>
+
+  </div>
+</nav>

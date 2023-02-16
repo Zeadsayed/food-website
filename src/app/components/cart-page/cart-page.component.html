@@ -1,0 +1,98 @@
+<app-not-found [visible]="!cart || cart.items.length <= 0"
+  notFoundMessage="Cart Page Is Empty!"   resetLinkText="Go To Homepage">
+</app-not-found>
+
+<div *ngIf="cart && cart.items.length > 0" class="containerr">
+
+  <ul>
+    <li *ngFor="let cartItem of cart.items">
+      <div>
+        <img [src]="cartItem.food.imgUrl" [alt]="cartItem.food.name">
+      </div>
+
+      <div>
+        <a routerLink="/food/{{cartItem.food.id}}">
+          {{cartItem.food.name}}
+        </a>
+      </div>
+
+      <div>
+        <select #quantitySelect (change)="changeQuantity(cartItem,quantitySelect.value)">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+        </select>
+      </div>
+
+      <div>
+        {{cartItem.price | currency}}
+      </div>
+
+      <div>
+        <button class="btn btn-secondary remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="chechout">
+    <div>
+      <div class="foods-count">{{cart.items.length}}</div>
+      <div class="total-price">{{cart.totalPrice | currency }}</div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<!-- <div class="container">
+  <div class="row" *ngFor="let cartItem of cart.items">
+
+    <div class="col-md-12">
+
+      <div>
+        <img [src]="cartItem.food.imgUrl" [alt]="cartItem.food.name" class="w-25">
+      </div>
+
+      <div>
+        <a routerLink="/food/{{cartItem.food.id}}">
+          {{cartItem.food.name}}
+        </a>
+      </div>
+
+      <div>
+        <select #quantitySelect (change)="changeQuantity(cartItem,quantitySelect.value)">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+        </select>
+      </div>
+
+      <div>
+        {{cartItem.price | currency}}
+      </div>
+
+      <div>
+        <button class="btn btn-danger remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </button>
+      </div>
+
+      <div class="chechout">
+        <div>
+          <div class="foods-count">{{cart.items.length}}</div>
+          <div class="total-price">{{cart.totalPrice | currency }}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+ -->

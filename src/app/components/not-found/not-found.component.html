@@ -1,0 +1,14 @@
+<div class="div d-flex justify-content-center align-items-center">
+  <div class="conatiner" *ngIf="visible">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        {{notFoundMessage}} <br>
+
+        <button class="btn my-2 rounded rounded-5">
+          <a routerLink="{{resetLinkRoute}}" class="text-decoration-none  text-white">{{resetLinkText}}</a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

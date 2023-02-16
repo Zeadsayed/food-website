@@ -1,0 +1,70 @@
+.navbar{
+  background: #fff;
+  border-bottom: 1px solid #e72929;
+}
+
+a{
+  color: #af1313 !important;
+  transition: all 0.5s;
+}
+
+a:hover{
+  color: #af1313de !important;
+}
+
+.navbar-brand{
+  font-weight: bold;
+  padding: 5px;
+}
+.nav-item{
+  font-weight: bold;
+}
+
+.form input{
+  border-radius: 10rem 0 0 10rem;
+  border: none;
+  height: 2rem;
+  width: 15rem;
+  background-color: #f1f1f1;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+.form .bt{
+  height: 2rem;
+  width: 5rem;
+  color: gray;
+  font-size: 1rem;
+  border-radius: 0 10rem 10rem 0;
+  border: none;
+  background-color: #e72929;
+  color: white;
+  opacity: 0.8;
+  outline: none;
+  transition: all 0.5s;
+}
+
+.btn{
+  background-color: #e72929 !important;
+  opacity: 0.8;
+  outline: none;
+  transition: all 0.5s;
+}
+
+.btn:hover{
+  opacity: 1;
+}
+
+.navbar-collapse .bt:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 993px) {
+  .form{
+    display: none;
+  }
+}

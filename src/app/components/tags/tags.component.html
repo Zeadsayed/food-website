@@ -1,0 +1,19 @@
+<div class="container my-3">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="nav nav-pills justify-content-center"  *ngIf="tags">
+        <a class="nav-link active mx-1 mb-2" *ngFor="let tag of tags" routerLink="/tag/{{tag.name}}">
+          {{tag.name}} ({{tag.count}})
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="nav nav-pills" *ngIf="foodPageTags">
+  <a class="nav-link active mx-1 mb-2" *ngFor="let tagName of foodPageTags" routerLink="/tag/{{tagName}}">
+    {{tagName}})
+  </a>
+</div>

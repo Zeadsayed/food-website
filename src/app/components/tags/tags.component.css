@@ -1,0 +1,10 @@
+.active{
+  background: #e72929 !important;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.nav-link:focus,:hover{
+  opacity: 1;
+}
+
